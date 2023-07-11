@@ -7,7 +7,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:rolebased/timer.dart';
 import 'package:geolocator/geolocator.dart';
-
+import 'package:rolebased/upi_payment.dart';
 import 'login.dart';
 
 var lat;
@@ -78,7 +78,7 @@ class _StudentState extends State<Student> {
                         borderRadius: BorderRadius.circular(20)),
                     child: Center(
                         child: Text(
-                      'timer',
+                      'Timer',
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,
@@ -101,7 +101,7 @@ class _StudentState extends State<Student> {
                         borderRadius: BorderRadius.circular(20)),
                     child: Center(
                         child: Text(
-                      'bluetooth',
+                      'Bluetooth',
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,
@@ -125,7 +125,7 @@ class _StudentState extends State<Student> {
                     },
                     child: Center(
                         child: Text(
-                      'Get Loccation',
+                      'Get Location',
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,
@@ -160,18 +160,27 @@ class _StudentState extends State<Student> {
                 ),
               ),
 
-              //Padding(
-              //  padding: const EdgeInsets.all(8.0),
-              // child: Container(
-              // width: 220,
-              // height: 60,
-              // decoration: BoxDecoration(
-              // color: Colors.orange,
-              //borderRadius: BorderRadius.circular(20)
-              // ),
-              // child: Center(child: Text('data',style: TextStyle(color: Colors.white,fontSize: 20 , fontWeight: FontWeight.bold),)),
-              // ),
-              // )
+              Padding(
+              padding: const EdgeInsets.all(8.0),
+               child: InkWell(
+                  onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => UPI_PAYMENT(
+                
+                    ),
+                  
+                  )
+               ),
+               child: Container(
+              width: 220,
+               height: 60,
+               decoration: BoxDecoration(
+              color: Colors.orange,
+              borderRadius: BorderRadius.circular(20)
+               ),
+               child: Center(child: Text('Payment',style: TextStyle(color: Colors.white,fontSize: 20 , fontWeight: FontWeight.bold),
+               )),
+               ),
+               ))
             ],
           ),
         ));
