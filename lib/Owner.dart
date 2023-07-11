@@ -59,7 +59,7 @@ class _TeacherState extends State<Teacher> {
                         borderRadius: BorderRadius.circular(20)),
                     child: Center(
                         child: Text(
-                      'timer',
+                      'Timer',
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,
@@ -82,7 +82,7 @@ class _TeacherState extends State<Teacher> {
                         borderRadius: BorderRadius.circular(20)),
                     child: Center(
                         child: Text(
-                      'bluetooth',
+                      'Bluetooth',
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,
