@@ -85,7 +85,7 @@ class TimerProvider with ChangeNotifier {
       continueExtraTimer();
     } else {
       _timer = Timer.periodic(Duration(seconds: 1), (timer) {
-        if (_seconds > 1) {
+        if (_seconds >= 1) {
           _seconds--;
         } else if (_seconds == 1 && _hour == 0 && _minute == 0) {
           _seconds--;
